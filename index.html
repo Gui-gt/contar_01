@@ -7,8 +7,27 @@
 </head>
 <body>
     <section>
-        <div id="dados"></div>
-        <div id="res"></div>
+        <div id="dados">
+            inicio: 
+            <input type="number" name="inicio" id="txti"><br><br>
+            Fim:
+            <input type="number" name="fim" id="txtf"><br><br>
+            Passo:
+            <input type="number" name="passo" id="txtp">
+            <br><br>
+            <input type="button" value="CONTAR" onclick="contar()">
+        </div><br>
+        <div id="res">
+            preparando a contagem...
+        </div>
     </section>
+    <script>
+        function contar(){
+            var ini = document.getElementById('txti')
+            var fim = document.getElementById('fim')
+            var passo = document.getElementById('passo')
+            var res = document.getElementById('res')
+        }
+    </script>
 </body>
 </html>
