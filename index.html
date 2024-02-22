@@ -24,9 +24,28 @@
     <script>
         function contar(){
             var ini = document.getElementById('txti')
-            var fim = document.getElementById('fim')
-            var passo = document.getElementById('passo')
+            var fim = document.getElementById('txtf')
+            var passo = document.getElementById('txtp')
             var res = document.getElementById('res')
+            if(ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+                alert(`[ERRO] impossivel contar`)
+            }else{
+                let i = Number(txti.value)
+                let f = Number(txtf.value)
+                let p = Number(txtp.value)
+                if(p >= f){
+                    alert(`[ERRO] passo invalido, considerando passo 1`)
+                    p = 1
+                }else if(i < f){
+                    for(var c = i;c <= f;c += p){
+                        res.innerHTML += `${c} \u{1F449}`
+                    }
+                }else if(i > f){
+                    for(var c = i;c >= f;c -= p){
+                        res.innerHTML += `${c} \u{1F449}`
+                    }
+                }res.innerHTML += `\u{1F3C1}`
+            }
         }
     </script>
 </body>
